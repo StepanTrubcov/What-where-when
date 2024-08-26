@@ -1,0 +1,170 @@
+.blok{
+    border-width:3px;
+    border-style:groove;
+    border-color: rgb(27, 1, 255);
+    color:rgb(255, 255, 255);
+    background-color:rgb(2, 1, 52);
+    margin: 0 550px 0 500px;
+    border-radius: 30px;
+    width: 480px;
+    height: 400px;
+    -webkit-box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
+    box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
+    box-shadow: 0 0 1px #51b7ff, 0 0 2px #51b7ff, 0 0 6px #51b7ff, 0 0 12px #51b7ff, inset 0 0 1px #51b7ff, inset 0 0 2px #51b7ff, inset 0 0 6px #51b7ff, inset 0 0 12px #51b7ff;
+}
+
+.NavLink{
+    font-size: 25px;
+    margin: 40px 0 0 120px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+.NavLink::after{
+    display:block;
+    content: '';
+    width: inherit;
+    border-bottom: solid 3px rgb(255, 255, 255);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin: left;
+}
+
+.NavLink:hover:after { transform: scaleX(1); }
+
+.Question{
+    font-size: 25px;
+    margin: 10px;
+    text-align: center;
+    /* font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    animation: 2s neon-2 alternate-reverse infinite; */
+}
+@keyframes neon-2 {
+    from {
+        text-shadow: 0 0 5px #FFF,
+        0 0 10px #FFF,
+        0 0 15px #FFF,
+        0 0 20px #BFE2FF;
+    }
+    to {
+        text-shadow: 0 0 20px #BFE2FF,
+        0 0 35px #BFE2FF,
+        0 0 40px #BFE2FF,
+        0 0 50px #BFE2FF,
+        0 0 800px #BFE2FF;
+    }
+}  
+
+.input[type=text]:focus {
+    border: 3px solid rgb(53, 144, 255);
+  }
+
+  .linieQuestion{
+    width: 70%;
+    height: 30px;
+    font-size: 25px;
+    margin: 15px 0 0 65px;
+    border-radius: 30px;
+    border-color: #51b7ff;
+    border-width: 5px;
+  }
+
+  .Answers{
+    font-size: 20px;
+    text-align: center
+  }
+
+  .linie{
+    width: 40%;
+    height: 30px;
+    font-size: 25px;
+    margin: 10px 0 0 22px;
+    border-radius: 30px;
+    border-color: #51b7ff;
+    border-width: 5px;
+  }
+
+  .input0{
+    width: 40%;
+    height: 30px;
+    font-size: 25px;
+    margin: 10px 0 0 135px;
+    border-radius: 30px;
+    border-color: #51b7ff;
+    border-width: 5px;
+  }
+
+  .input{
+    display: flex;
+  }
+
+  .correct{
+    margin: 5px 0 0 65px ;
+    font-size: 18px;
+  }
+
+  .button {
+    width: 70px;
+    height: 50px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #FFF;
+    margin: 0px 0 0 205px;
+}
+
+.button:before {
+    content: '';
+    background: linear-gradient(45deg, #25c1ff, #004a8a, #3ccedb, #1bbdbb, #00ffd5, #002bff, #2600ff, #1104a0, #160066);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.button:active {
+    color: #000
+}
+
+.button:active:after {
+    background: transparent;
+}
+
+.button:hover:before {
+    opacity: 1;
+}
+
+.button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
