@@ -25,7 +25,7 @@ const formReducer = (state = initialState, action) => {
     }
   };
   
-  export const addquestionText =(question,correctAnswer,answer0,answer1,answer2)=>({
+  export const addquestionImg =(question,correctAnswer,answer0,answer1,answer2)=>({
       type:ADD_STATE,
       question,
       correctAnswer,

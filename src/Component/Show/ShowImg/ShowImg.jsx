@@ -1,23 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import c from "./Show.module.css";
-import shuffle from "../Function/shuffle";
+import c from "./ShowImg.module.css";
+import shuffle from "../../Function/shuffle";
 import swal from "sweetalert";
-import { Navigate } from "react-router-dom";
 
-
-class Show extends React.Component {
+class ShowImg extends React.Component {
   things = [
-    this.props.formData.correctAnswer,
-    this.props.formData.answer0,
-    this.props.formData.answer1,
-    this.props.formData.answer2,
+    this.props.formDataImg.correctAnswer,
+    this.props.formDataImg.answer0,
+    this.props.formDataImg.answer1,
+    this.props.formDataImg.answer2,
   ];
   onAnswer = (event) => {
     const answer = event.target.dataset.value;
-    if (answer === this.props.formData.correctAnswer) { 
+    if (answer === this.props.formDataImg.correctAnswer) { 
       debugger 
-     return <Navigate replace to="/form/" />, swal({
+     return swal({
         title: "Right!!!",
         text: "You did a great job with the task.",
         icon: "success",
@@ -34,18 +32,14 @@ class Show extends React.Component {
   };
 
   mixer = shuffle(this.things).map((item) => (
-    <button
-      data-value={item}
-      onClick={this.onAnswer}
-      key={item}
-      class="btn-multiple"
-      className={c.button}
-    >
-      {item}
-    </button>
+      <img 
+            data-value={item}
+            onClick={this.onAnswer}
+            key={item}
+      className={c.img} src={item} />
   ));
   render() {
-    if (this.props.formData.question === "") {
+    if (this.props.formDataImg.question === "") {
       return (
         <div className={c.blok}>
           <div>
@@ -66,7 +60,7 @@ class Show extends React.Component {
             <p className={c.Question}>Question?</p>
           </div>
           <div>
-            <p className={c.Question}>{this.props.formData.question}</p>
+            <p className={c.Question}>{this.props.formDataImg.question}</p>
           </div>
           <div>
             <p className={c.Answers}>Answers</p>
@@ -83,4 +77,4 @@ class Show extends React.Component {
   }
 }
 
-export default Show;
+export default ShowImg;

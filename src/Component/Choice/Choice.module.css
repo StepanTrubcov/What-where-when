@@ -1,0 +1,68 @@
+.form{
+    display: flex;
+    margin: 10px 10px 10px 390px;
+}
+
+.informationText{
+    display: flex;
+}
+
+.form1{
+    margin: 0px 0px 0px 230px;
+}
+
+.information{
+    margin:10px 10px 10px 120px;
+    color: brown;
+}
+
+.text{
+    margin:10px 10px 10px 150px;
+}
+
+.information0{
+    margin:10px 10px 10px 400px;
+    color: brown;
+}
+
+.text0{
+    margin:10px 10px 10px 360px;
+}
+
+.NavLink0{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.NavLink0::after{
+    display:block;
+    content: '';
+    width: inherit;
+    border-bottom: solid 3px rgb(0, 0, 0);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin: top;
+}
+
+.NavLink0:hover:after { transform: scaleX(1); }
+
+.NavLink1{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.NavLink1::after{
+    display:block;
+    content: '';
+    width: inherit;
+    border-bottom: solid 3px rgb(0, 0, 0);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin:top;
+}
+
+.NavLink1:hover:after { transform: scaleX(1); }

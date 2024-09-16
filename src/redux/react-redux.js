@@ -1,11 +1,15 @@
-import { combineReducers, legacy_createStore as createStore } from "redux";
-import formReducer from './Form-reduser'
+import { combineReducers,createStore} from "redux";
+import formReducer0 from './Form-reduser'
+import formReducer1 from './FormImg-reduser'
+import { reducer as formReducer } from 'redux-form'
 
-const reducer = combineReducers({
-formData:formReducer,
+const reducers = combineReducers({
+formData:formReducer0,
+formDataImg:formReducer1,
+form:formReducer,
 })
 
-const store = createStore(reducer);
+const store = createStore(reducers);
 
 window.store = store
 
