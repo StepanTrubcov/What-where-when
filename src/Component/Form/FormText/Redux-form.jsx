@@ -56,7 +56,14 @@ component={InputAns}
           name={'answer3'}
         />
       </div>
-      <div>
+      <div className={c.div} >
+      <h2 className={c.Timer} >Timer</h2>
+      <Field
+      component={'input'}
+          type='checkbox'
+          className={c.linieTimer}
+          name={'Timer'}
+        />
         <button className={c.button}>Save</button>
         <NavLink to='/show/' className={c.NavLink} >Show</NavLink>
       </div>
@@ -68,7 +75,7 @@ const LoginReduxForm = reduxForm({
   form: "question",
 })(ReduxForm);
 
-const Question = (props) => {
+const QuestionText = (props) => {
   const onSubmit = (formData) => {
     props.newInformation(formData)
   }
@@ -79,4 +86,4 @@ const Question = (props) => {
   );
 };
 
-export default Question;
+export default QuestionText;

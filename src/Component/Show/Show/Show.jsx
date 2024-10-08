@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import c from "./Show.module.css";
-import shuffle from "../Function/shuffle";
+import shuffle from "../../Function/shuffle";
 import swal from "sweetalert";
-import { Navigate } from "react-router-dom";
+import Timer from '../../Timer/Timer'
 
 
 class Show extends React.Component {
@@ -13,11 +13,14 @@ class Show extends React.Component {
     this.props.formData.answer1,
     this.props.formData.answer2,
   ];
+
+  timer = this.props.formData.Timer
+
   onAnswer = (event) => {
     const answer = event.target.dataset.value;
-    if (answer === this.props.formData.correctAnswer) { 
-      debugger 
-     return <Navigate replace to="/form/" />, swal({
+    if (answer === this.props.formData.correctAnswer) {
+      debugger
+      return swal({
         title: "Right!!!",
         text: "You did a great job with the task.",
         icon: "success",
@@ -59,8 +62,16 @@ class Show extends React.Component {
         </div>
       );
     }
+
+    const TimerText = () => {
+      if (this.timer === true) {
+        return <Timer />
+      }
+    }
+
     return (
       <body onload="yourfunction()">
+        <div className={c.Timer} >{TimerText()}</div>
         <div className={c.blok}>
           <div>
             <p className={c.Question}>Question?</p>

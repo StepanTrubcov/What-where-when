@@ -3,6 +3,16 @@
     margin: 10px 10px 10px 390px;
 }
 
+.schoolboy{
+    width: 80px;
+    margin: 10px 0 0 470px;
+}
+
+.preschooler{
+ width: 100px;
+ margin: 10px 0 0 400px;
+}
+
 .informationText{
     display: flex;
 }
@@ -12,8 +22,9 @@
 }
 
 .information{
-    margin:10px 10px 10px 120px;
+    margin:10px 10px 10px 190px;
     color: brown;
+    font-size: 10px;
 }
 
 .text{
@@ -21,8 +32,9 @@
 }
 
 .information0{
-    margin:10px 10px 10px 400px;
+    margin:10px 10px 10px 450px;
     color: brown;
+    font-size: 10px;
 }
 
 .text0{

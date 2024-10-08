@@ -14,6 +14,11 @@
     box-shadow: 0 0 1px #51b7ff, 0 0 2px #51b7ff, 0 0 6px #51b7ff, 0 0 12px #51b7ff, inset 0 0 1px #51b7ff, inset 0 0 2px #51b7ff, inset 0 0 6px #51b7ff, inset 0 0 12px #51b7ff;
 }
 
+.div{
+  margin: 40px 0 0 0;
+  display: flex;
+}
+
 .linie{
   width: 80%;
   height: 30px;
@@ -32,7 +37,7 @@
 
 .NavLink{
     font-size: 25px;
-    margin: 40px 0 0 120px;
+    margin: 15px 20px 0 100px;
     display: inline-block;
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -108,6 +113,20 @@
     display: flex;
   }
 
+  .Timer{
+    margin: 20px 0 0 30px;
+  }
+
+  .linieTimer{
+    width: 80%;
+    height: 20px;
+    font-size: 25px;
+    margin: 28px 0 0 0px;
+    border-radius: 30px;
+    border-color: #51b7ff;
+    border-width: 5px;
+  }
+
   .correct{
     margin: 5px 0 0 65px ;
     font-size: 18px;
@@ -125,7 +144,7 @@
     border-radius: 10px;
     border-width: 2px;
     border-color: #FFF;
-    margin: 0px 0 0 205px;
+    margin: 0px 30px 0 85px;
 }
 
 .button:before {

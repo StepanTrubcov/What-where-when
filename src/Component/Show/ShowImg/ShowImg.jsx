@@ -1,26 +1,30 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Navigate } from "react-router-dom";
 import c from "./ShowImg.module.css";
 import shuffle from "../../Function/shuffle";
 import swal from "sweetalert";
+import Timer from '../../Timer/Timer'
 
 class ShowImg extends React.Component {
   things = [
-    this.props.formDataImg.correctAnswer,
-    this.props.formDataImg.answer0,
-    this.props.formDataImg.answer1,
-    this.props.formDataImg.answer2,
+    this.props.formDataImg.correctAnswerImg,
+    this.props.formDataImg.answer0Img,
+    this.props.formDataImg.answer1Img,
+    this.props.formDataImg.answer2Img,
   ];
+
+  timer=this.props.formDataImg.TimerImg
+
   onAnswer = (event) => {
     const answer = event.target.dataset.value;
-    if (answer === this.props.formDataImg.correctAnswer) { 
-      debugger 
+    if (answer === this.props.formDataImg.correctAnswerImg) {
+      this.timer = false 
      return swal({
         title: "Right!!!",
         text: "You did a great job with the task.",
         icon: "success",
         button: "Сontinue",
-      });
+      }) , <Navigate replace to="/choice" />;
     } else {
       return swal({
         title: "Not true!!!",
@@ -39,7 +43,7 @@ class ShowImg extends React.Component {
       className={c.img} src={item} />
   ));
   render() {
-    if (this.props.formDataImg.question === "") {
+    if (this.props.formDataImg.questionImg === "") {
       return (
         <div className={c.blok}>
           <div>
@@ -47,27 +51,35 @@ class ShowImg extends React.Component {
               You haven't entered a question or saved it.
             </p>
           </div>
-          <NavLink to="/form/" className={c.NavLink0}>
+          <NavLink to="/formImg/" className={c.NavLink0}>
             Back
           </NavLink>
         </div>
       );
     }
+
+  const TimerImg = () =>{
+    if(this.timer === true){
+      return <Timer/>
+     }
+  }
+
     return (
       <body onload="yourfunction()">
+        <div className={c.Timer} >{TimerImg()}</div>
         <div className={c.blok}>
-          <div>
+          <div  className={c.Question} >
             <p className={c.Question}>Question?</p>
           </div>
           <div>
-            <p className={c.Question}>{this.props.formDataImg.question}</p>
+            <p className={c.Question}>{this.props.formDataImg.questionImg}</p>
           </div>
           <div>
             <p className={c.Answers}>Answers</p>
           </div>
           <div>{this.mixer}</div>
           <div>
-            <NavLink to="/form/" className={c.NavLink}>
+            <NavLink to="/formImg/" className={c.NavLink}>
               Back
             </NavLink>
           </div>

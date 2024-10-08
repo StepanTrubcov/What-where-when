@@ -1,4 +1,4 @@
-const ADD_STATE = "ADD_STATE";
+const ADD_STATE = "form/ADD_STATE";
 
 
 const initialState ={
@@ -7,9 +7,10 @@ const initialState ={
     answer0:'',
     answer1:'',
     answer2:'',
+    Timer:false,
 }
 
-const formReducer = (state = initialState, action) => {
+const formReducer0 = (state = initialState, action) => {
     switch (action.type) {
       case ADD_STATE:
         return{
@@ -19,19 +20,21 @@ const formReducer = (state = initialState, action) => {
             answer0:action.answer0,
             answer1:action.answer1,
             answer2:action.answer2,
+            Timer:action.Timer,
         }
         default:
           return state;
     }
   };
   
-  export const addquestionText =(question,correctAnswer,answer0,answer1,answer2)=>({
+  export const addquestionText =(question,correctAnswer,answer0,answer1,answer2,Timer)=>({
       type:ADD_STATE,
       question,
       correctAnswer,
       answer0,
       answer1,
       answer2,
+      Timer,
   })
   
-  export default formReducer;
+  export default formReducer0;

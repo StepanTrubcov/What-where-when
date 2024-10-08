@@ -5,9 +5,10 @@ import FormTextConteiner from './Component/Form/FormText/FormConteiner'
 import Navbar from './Component/Navbar/Navbar'
 import FormImgConteiner from './Component/Form/FormImg/FormImgConteiner'
 import {BrowserRouter} from "react-router-dom";
-import ShowConteiner from './Component/Show/ShowConteiner'
+import ShowConteiner from './Component/Show/Show/ShowConteiner'
 import ShowImgConteiner from './Component/Show/ShowImg/ShowImgConteiner'
 import Choice from './Component/Choice/Choice'
+import True from './Component/Answers/True';
 
 const App = (props) => {
   return (
@@ -22,6 +23,7 @@ const App = (props) => {
           <Route path='/formImg/' element={<FormImgConteiner/>} />
           <Route path='/show/' element={<ShowConteiner/>} />
           <Route path='/showImg/' element={<ShowImgConteiner/>} />
+          <Route path='/true' element={<True/>} />
         </Routes>
       </div>
       </BrowserRouter>

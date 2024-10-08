@@ -18,7 +18,7 @@ const ReduxForm = (props) => {
           validate={[requiredField, maxLength30]}
           component={Input}
           className={c.linieQuestion}
-          name={'question'}
+          name={'questionImg'}
         />
       </div>
       <div>
@@ -30,33 +30,40 @@ const ReduxForm = (props) => {
       <p className={c.correct} >correct answer</p>
       <div className={c.input} >
         <Field
-                  validate={[requiredField, maxLength30]}
+                  validate={[requiredField]}
           component={InputAns}
           className={c.linie}
-          name={'answer0'}
+          name={'answer0Img'}
         />
         <Field
-                  validate={[requiredField, maxLength30]}
+                  validate={[requiredField]}
           className={c.linie}
           component={InputAns}
-          name={'answer1'}
+          name={'answer1Img'}
         />
       </div>
       <div className={c.input} >
         <Field
-                  validate={[requiredField, maxLength30]}
+                  validate={[requiredField]}
           component={InputAns}
           className={c.linie}
-          name={'answer2'}
+          name={'answer2Img'}
         />
         <Field
-                  validate={[requiredField, maxLength30]}
+          validate={[requiredField]}
           component={InputAns}
           className={c.linie}
-          name={'answer3'}
-        />
+          name={'answer3Img'}
+        /> 
       </div>
-      <div>
+      <div className={c.div} >
+        <h2 className={c.Timer} >Timer</h2>
+      <Field
+      component={'input'}
+          type='checkbox'
+          className={c.linieTimer}
+          name={'TimerImg'}
+        />
         <button className={c.button}>Save</button>
         <NavLink to='/showImg/' className={c.NavLink} >Show</NavLink>
       </div>
@@ -74,7 +81,7 @@ const Question = (props) => {
   }
   return (
     <div className={c.information}>
-      <LoginReduxForm onSubmit={onSubmit} />
+      <LoginReduxForm onSubmit={onSubmit}/>
     </div>
   );
 };
