@@ -1,44 +1,51 @@
 .form{
     display: flex;
-    margin: 10px 10px 10px 390px;
 }
 
 .schoolboy{
     width: 80px;
-    margin: 10px 0 0 470px;
+    margin: 10px auto 0 auto;
+}
+
+.img{
+    display: flex;
 }
 
 .preschooler{
  width: 100px;
- margin: 10px 0 0 400px;
+ margin: 10px auto 0 auto;
 }
 
-.informationText{
+.text{
     display: flex;
 }
 
+.form0{
+    margin: 0px auto 0px auto;
+}
+
 .form1{
-    margin: 0px 0px 0px 230px;
+    margin: 0px auto 0px auto;
 }
 
 .information{
-    margin:10px 10px 10px 190px;
+    margin:10px auto 10px auto;
     color: brown;
     font-size: 10px;
 }
 
 .text{
-    margin:10px 10px 10px 150px;
+    margin:10px auto 10px auto;
 }
 
 .information0{
-    margin:10px 10px 10px 450px;
+    margin:10px auto 10px auto;
     color: brown;
     font-size: 10px;
 }
 
 .text0{
-    margin:10px 10px 10px 360px;
+    margin:10px auto 10px auto;
 }
 
 .NavLink0{

@@ -6,8 +6,4 @@ const mapStateToProps = (state) => ({
     formData: state.formData
 })
 
-const FormConteiner = () =>{
-    return <FormText/>
-}
-
-export default connect(mapStateToProps, { addquestionText })(FormConteiner)
+export default connect(mapStateToProps, { addquestionText })(FormText)
