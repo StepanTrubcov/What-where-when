@@ -59,7 +59,6 @@ const Timer = () => {
     }, []);
 
         if (timer === '00:00:00') {
-            debugger
             return alert('Time is up'),<Navigate replace to="/choice" />
         }
 

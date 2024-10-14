@@ -3,9 +3,8 @@ import Question from './Redux-formImg'
 
 class FormImg extends React.Component {
 
-  newInformation = (props) => {
-    console.log(props)
-    this.props.addquestionImg(props.questionImg,props.answer0Img,props.answer1Img,props.answer2Img,props.answer3Img,props.TimerImg);
+  newInformation = (props,preview,wrongAnswer1,wrongAnswer2,wrongAnswer3) => {
+    this.props.addquestionImg(props.questionImg,preview,wrongAnswer1,wrongAnswer2,wrongAnswer3,props.TimerImg);
   };
 
   render() {

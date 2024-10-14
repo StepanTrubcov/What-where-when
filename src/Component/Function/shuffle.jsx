@@ -2,14 +2,10 @@ import React from "react";
 
 const shuffle = (array) => {
     let m = array.length, t, i;
-  
-    // Пока есть элементы для перемешивания
     while (m) {
   
-      // Взять оставшийся элемент
       i = Math.floor(Math.random() * m--);
   
-      // И поменять его местами с текущим элементом
       t = array[m];
       array[m] = array[i];
       array[i] = t;
@@ -19,3 +15,8 @@ const shuffle = (array) => {
   }
 
   export default shuffle;
+
+  export const correctPhoto = (e,preview) =>{
+    const objectUrl = URL.createObjectURL(e.target.files[0])
+    preview(objectUrl)
+  }
