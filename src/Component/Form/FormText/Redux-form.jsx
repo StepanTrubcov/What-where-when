@@ -57,13 +57,13 @@ component={InputAns}
         />
       </div>
       <div className={c.div} >
-      <h2 className={c.Timer} >Timer</h2>
+      {/* <h2 className={c.Timer} >Timer</h2>
       <Field
       component={'input'}
           type='checkbox'
           className={c.linieTimer}
           name={'Timer'}
-        />
+        /> */}
         <button className={c.button}>Save</button>
         <NavLink to='/show/' className={c.NavLink} >Show</NavLink>
       </div>
