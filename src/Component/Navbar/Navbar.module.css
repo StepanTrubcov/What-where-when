@@ -18,3 +18,10 @@
 }
 
 .NavLink:hover:after { transform: scaleX(1); }
+
+@media (max-width:586px){
+    .NavLink{
+        font-size: 25px;
+        margin: 20px 0 20px 20px;
+    }
+}

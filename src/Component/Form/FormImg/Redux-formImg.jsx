@@ -33,7 +33,7 @@ const ReduxForm = ({handleSubmit,correctPhoto,correctPreview,wrongPhoto,wrongAns
       <input className={c.input} type='file' onChange={correctPhoto} />
       <input className={c.input} type='file' onChange={wrongPhoto} />
       </div>
-      <div>
+      <div className={c.images} >
       <img src={correctPreview} className={c.img} ></img>
       <img src={wrongAnswer1}  className={c.img} ></img>
       </div>
@@ -41,8 +41,10 @@ const ReduxForm = ({handleSubmit,correctPhoto,correctPreview,wrongPhoto,wrongAns
       <input className={c.input} type='file' onChange={wrongPhoto2} />
       <input className={c.input} type='file' onChange={wrongPhoto3} />
       </div>
+      <div className={c.images}>
       <img src={wrongAnswer2} className={c.img} ></img>
       <img src={wrongAnswer3} className={c.img} ></img>
+      </div>
       <div>
       <button className={c.button}>Save</button>
       <NavLink to='/showImg/' className={c.NavLink} >Show</NavLink>

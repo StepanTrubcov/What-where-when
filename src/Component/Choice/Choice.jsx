@@ -19,7 +19,7 @@ const Choice = (props) => {
         <div className={c.informationText} >
             <div className={c.text} >
                 <p className={c.text0}>The answers in the questionnaire will be text.</p>
-                <p className={c.text} >The answers in the questionnaire will be pictures.</p>
+                <p className={c.text1} >The answers in the questionnaire will be pictures.</p>
             </div>
             <div className={c.text} >
                 <p className={c.information0}>ENTER THE TEXT IN THE REPLY!!!</p>
