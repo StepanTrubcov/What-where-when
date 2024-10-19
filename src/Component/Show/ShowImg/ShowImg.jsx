@@ -43,21 +43,6 @@ class ShowImg extends React.Component {
       className={c.img} src={item} />
   ));
   render() {
-    if (this.props.formDataImg.questionImg === "") {
-      return (
-        <div className={c.blok}>
-          <div>
-            <p className={c.text}>
-              You haven't entered a question or saved it.
-            </p>
-          </div>
-          <NavLink to="/formImg/" className={c.NavLink0}>
-            Back
-          </NavLink>
-        </div>
-      );
-    }
-
   const TimerImg = () =>{
     if(this.timer === true){
       return <Timer/>
@@ -72,7 +57,7 @@ class ShowImg extends React.Component {
             <p className={c.Question}>Question?</p>
           </div>
           <div>
-            <p className={c.Question}>{this.props.formDataImg.questionImg}</p>
+            <p className={c.Question}>{this.props.formDataImg.questionImg || 'No question'}</p>
           </div>
           <div>
             <p className={c.Answers}>Answers</p>

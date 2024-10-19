@@ -16,7 +16,7 @@ const shuffle = (array) => {
 
   export default shuffle;
 
-  export const correctPhoto = (e,preview) =>{
-    const objectUrl = URL.createObjectURL(e.target.files[0])
+  export const Photo = (e,preview) =>{
+    const objectUrl = URL.createObjectURL(e)
     preview(objectUrl)
   }

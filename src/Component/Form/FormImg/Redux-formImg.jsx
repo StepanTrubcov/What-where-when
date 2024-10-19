@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import c from "./FormImg.module.css";
-import { NavLink } from "react-router-dom";
 import { Field, reduxForm } from "redux-form";
 import { maxLengthCreator, requiredField } from '../../../validator/validator'
-import { Input,InputAns } from '../../common/FormsControls'
-import { correctPhoto } from "../../Function/shuffle";
+import { Input, InputAns } from '../../common/FormsControls'
+import { Photo } from "../../Function/shuffle";
+import { useNavigate } from "react-router-dom";
 
 let maxLength30 = maxLengthCreator(30)
 
-const ReduxForm = ({handleSubmit,correctPhoto,correctPreview,wrongPhoto,wrongAnswer1,wrongPhoto2,wrongAnswer2,wrongAnswer3,wrongPhoto3}) => {
+const ReduxForm = ({set,handleSubmit, correctPhoto, correctPreview}) => {
+  const [wrongAnswer1, setWrongAnswer1] = useState()
+  const [wrongAnswer2, setWrongAnswer2] = useState()
+  const [wrongAnswer3, setWrongAnswer3] = useState()
   return (
     <form onSubmit={handleSubmit} className={c.blok}>
       <div>
@@ -30,24 +33,29 @@ const ReduxForm = ({handleSubmit,correctPhoto,correctPreview,wrongPhoto,wrongAns
       </div>
       <p className={c.correct} >correct answer</p>
       <div className={c.firstLine} >
-      <input className={c.input} type='file' onChange={correctPhoto} />
-      <input className={c.input} type='file' onChange={wrongPhoto} />
+        <input className={c.input} type='file' onChange={correctPhoto} />
+        <input className={c.input} type='file' onChange={(e) => {
+          Photo(e.target.files[0], setWrongAnswer1)
+        }} />
       </div>
       <div className={c.images} >
-      <img src={correctPreview} className={c.img} ></img>
-      <img src={wrongAnswer1}  className={c.img} ></img>
+        <img src={correctPreview} className={c.img} ></img>
+        <img src={wrongAnswer1} className={c.img} ></img>
       </div>
       <div className={c.firstLine} >
-      <input className={c.input} type='file' onChange={wrongPhoto2} />
-      <input className={c.input} type='file' onChange={wrongPhoto3} />
+        <input className={c.input} type='file' onChange={(e) => {
+          Photo(e.target.files[0], setWrongAnswer2)
+        }} />
+        <input className={c.input} type='file' onChange={(e) => {
+          Photo(e.target.files[0], setWrongAnswer3)
+        }} />
       </div>
       <div className={c.images}>
-      <img src={wrongAnswer2} className={c.img} ></img>
-      <img src={wrongAnswer3} className={c.img} ></img>
+        <img src={wrongAnswer2} className={c.img} ></img>
+        <img src={wrongAnswer3} className={c.img} ></img>
       </div>
       <div>
-      <button className={c.button}>Save</button>
-      <NavLink to='/showImg/' className={c.NavLink} >Show</NavLink>
+        <button onClick={()=>{set(wrongAnswer1,wrongAnswer2,wrongAnswer3)}} className={c.button}>Save</button>
       </div>
     </form>
   );
@@ -60,37 +68,27 @@ const LoginReduxForm = reduxForm({
 const Question = (props) => {
 
   const [correctPreview, setCorrectPreview] = useState()
-  const [wrongAnswer1, setWrongAnswer1 ] = useState()
-  const [wrongAnswer2, setWrongAnswer2 ] = useState()
-  const [wrongAnswer3, setWrongAnswer3 ] = useState()
 
-  const wrongPhoto3 = (e) =>{
+  const correctPhoto = (e) => {
     const objectUrl = URL.createObjectURL(e.target.files[0])
-    setWrongAnswer3(objectUrl)
+    setCorrectPreview(objectUrl)
   }
 
-  const wrongPhoto2 = (e) =>{
-    const objectUrl = URL.createObjectURL(e.target.files[0])
-    setWrongAnswer2(objectUrl)
+  const navigate = useNavigate();
+
+  const wrong = []
+
+  const set = (wrongAnswer1,wrongAnswer2,wrongAnswer3) => {
+    return wrong.push(wrongAnswer1,wrongAnswer2,wrongAnswer3)
   }
 
-const wrongPhoto1 = (e) =>{
-  const objectUrl = URL.createObjectURL(e.target.files[0])
-  setWrongAnswer1(objectUrl)
-}
-
-const correctPhoto = (e) =>{
-  const objectUrl = URL.createObjectURL(e.target.files[0])
-  setCorrectPreview(objectUrl)
-}
-
-console.log(wrongAnswer1)
   const onSubmit = (formData) => {
-    props.newInformation(formData,correctPreview,wrongAnswer1,wrongAnswer2,wrongAnswer3)
+    props.newInformation(formData,correctPreview,wrong[0],wrong[1],wrong[2])
+    return navigate('/showImg')
   }
   return (
     <div className={c.information}>
-      <LoginReduxForm wrongAnswer3={wrongAnswer3} correctPreview={correctPreview} wrongAnswer1={wrongAnswer1} wrongAnswer2={wrongAnswer2} wrongPhoto3={wrongPhoto3} wrongPhoto2={wrongPhoto2} wrongPhoto={wrongPhoto1} correctPhoto={correctPhoto} onSubmit={onSubmit}/>
+      <LoginReduxForm set={set} correctPreview={correctPreview} correctPhoto={correctPhoto} onSubmit={onSubmit} />
     </div>
   );
 };

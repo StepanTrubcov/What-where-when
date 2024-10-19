@@ -1,6 +1,6 @@
 import React from "react";
 import c from "./Form.module.css";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Field, reduxForm } from "redux-form";
 import { maxLengthCreator, requiredField } from '../../../validator/validator'
 import { Input, InputAns } from '../../common/FormsControls'
@@ -57,15 +57,15 @@ component={InputAns}
         />
       </div>
       <div className={c.div} >
-      {/* <h2 className={c.Timer} >Timer</h2>
+      <h2 className={c.Timer} >Timer</h2>
       <Field
       component={'input'}
           type='checkbox'
           className={c.linieTimer}
           name={'Timer'}
-        /> */}
+        />
         <button className={c.button}>Save</button>
-        <NavLink to='/show/' className={c.NavLink} >Show</NavLink>
+        {/* <NavLink to='/show/' className={c.NavLink} >Show</NavLink> */}
       </div>
     </form>
   );
@@ -76,8 +76,10 @@ const LoginReduxForm = reduxForm({
 })(ReduxForm);
 
 const QuestionText = (props) => {
+  const navigate = useNavigate();
   const onSubmit = (formData) => {
     props.newInformation(formData)
+    return navigate('/show')
   }
   return (
     <div className={c.information}>
