@@ -1,14 +1,6 @@
 .header {
     background-image: url('https://avatars.dzeninfra.ru/get-zen_doc/1894366/pub_5e6e2b0b6be9d72182b9ede9_5e6e2b146961bd79dbeba792/scale_1200');
-    background-size: cover;
-    color: #000000;
-    width: auto;
     height: 100px;
-    overflow: hidden;
-    position: relative;
-    -webkit-box-shadow: 0px 5px 22px 25px rgba(0, 0, 0, 0.2);
--moz-box-shadow: 0px 5px 22px 25px rgba(0, 0, 0, 0.2);
-box-shadow: 0px 5px 22px 25px rgba(0, 0, 0, 0.2);
   }
 .sign{
   display: flex;
@@ -45,7 +37,7 @@ box-shadow: 0px 5px 22px 25px rgba(0, 0, 0, 0.2);
 }    
 
 
-@media (max-width:586px){
+@media (max-width:666px){
   .sign .sign_word {
     font-size: 30px;
     margin: 0px 0 0 0px;
