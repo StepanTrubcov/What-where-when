@@ -1,14 +1,24 @@
-.form{
+
+.home{
+    margin: 20px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.blok{
+    display: flex;
+    flex-direction: column;
+}
+
+.blok1{
+    display: flex;
+    flex-direction: column;
 }
 
 .schoolboy{
     width: 80px;
-    margin: 10px auto 0 auto;
-}
-
-.img{
-    display: flex;
+    align-self:center;
 }
 
 .preschooler{
@@ -18,14 +28,6 @@
 
 .text{
     display: flex;
-}
-
-.form0{
-    margin: 0px auto 0px auto;
-}
-
-.form1{
-    margin: 0px auto 0px auto;
 }
 
 .information{
@@ -53,6 +55,7 @@
 }
 
 .NavLink0{
+    margin: 0 auto 0 auto;
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 30px;
@@ -72,6 +75,7 @@
 .NavLink0:hover:after { transform: scaleX(1); }
 
 .NavLink1{
+    margin: 0 auto 0 auto;
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 30px;
@@ -91,30 +95,10 @@
 .NavLink1:hover:after { transform: scaleX(1); }
 
 @media (max-width:666px){
-    .NavLink0{
-        font-size: 20px;
-    }
-    .NavLink1{
-        font-size: 20px;
-    }
-    .information0{
-        font-size: 8px;
-    }
-    .information{
-        font-size: 8px;
-    }
-    .preschooler{
-        width: 70px;
-        height: 70px;
-       }
-       .schoolboy{
-        width: 50px;
-        height: 70px;
-    }
     .text0{
 font-size: 10px;
     }
     .text1{
         font-size: 10px;
-            }
+            } 
   }
