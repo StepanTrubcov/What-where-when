@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import c from "./FormImg.module.css";
 import { Field, reduxForm } from "redux-form";
 import { maxLengthCreator, requiredField } from '../../../validator/validator'
-import { Input, InputAns } from '../../common/FormsControls'
+import { Input } from '../../common/FormsControls'
 import { Photo } from "../../Function/shuffle";
 import { useNavigate } from "react-router-dom";
 

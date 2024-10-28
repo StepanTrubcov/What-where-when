@@ -4,7 +4,6 @@
     border-color: rgb(27, 1, 255);
     color:rgb(255, 255, 255);
     background-color:rgb(2, 1, 52);
-    margin: 0 auto 10px auto;
     border-radius: 30px;
     width: 550px;
     height: 540px;
@@ -14,9 +13,9 @@
     box-shadow: 0 0 1px #51b7ff, 0 0 2px #51b7ff, 0 0 6px #51b7ff, 0 0 12px #51b7ff, inset 0 0 1px #51b7ff, inset 0 0 2px #51b7ff, inset 0 0 8px #51b7ff, inset 0 0 15px #51b7ff;
 }
 
-.Timer{
-    margin: 0px 0 0 1200px;
-    font-size: 50px;
+.flex{
+    display: flex;
+    justify-content: center;
 }
 
 .img{

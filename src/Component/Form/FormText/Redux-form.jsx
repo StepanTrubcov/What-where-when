@@ -9,6 +9,7 @@ let maxLength30 = maxLengthCreator(30)
 
 const ReduxForm = (props) => {
   return (
+    <div className={c.flex} >
     <form onSubmit={props.handleSubmit} className={c.blok}>
       <div>
         <p className={c.Question} >Question for schoolchildren</p>
@@ -28,6 +29,7 @@ const ReduxForm = (props) => {
         <p className={c.Answers0} >In response to enter text</p>
       </div>
       <p className={c.correct} >correct answer</p>
+      <div className={c.firstLine} >
       <div className={c.input} >
         <Field
         validate={[requiredField, maxLength30]}
@@ -56,6 +58,7 @@ component={InputAns}
           name={'answer3'}
         />
       </div>
+      </div>
       <div className={c.div} >
       <h2 className={c.Timer} >Timer</h2>
       <Field
@@ -65,9 +68,9 @@ component={InputAns}
           name={'Timer'}
         />
         <button className={c.button}>Save</button>
-        {/* <NavLink to='/show/' className={c.NavLink} >Show</NavLink> */}
       </div>
     </form>
+    </div>
   );
 }
 

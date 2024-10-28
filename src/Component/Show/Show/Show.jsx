@@ -71,7 +71,7 @@ class Show extends React.Component {
 
     return (
       <body onload="yourfunction()">
-        <div className={c.Timer} >{TimerText()}</div>
+        <div className={c.flex} ><div className={c.Timer} >{TimerText()}</div></div>
         <div className={c.blok}>
           <div>
             <p className={c.Question}>Question?</p>

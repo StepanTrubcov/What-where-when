@@ -52,6 +52,7 @@ class ShowImg extends React.Component {
     return (
       <body onload="yourfunction()">
         <div className={c.Timer} >{TimerImg()}</div>
+        <div className={c.flex} >
         <div className={c.blok}>
           <div  className={c.Question} >
             <p className={c.Question}>Question?</p>
@@ -68,6 +69,7 @@ class ShowImg extends React.Component {
               Back
             </NavLink>
           </div>
+        </div>
         </div>
       </body>
     );
