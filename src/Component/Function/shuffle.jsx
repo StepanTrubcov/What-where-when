@@ -1,6 +1,7 @@
 import React from "react";
 
 const shuffle = (array) => {
+  if(array.length > 5) return array.length
     let m = array.length, t, i;
     while (m) {
   

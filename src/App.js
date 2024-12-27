@@ -8,7 +8,6 @@ import {BrowserRouter} from "react-router-dom";
 import ShowConteiner from './Component/Show/Show/ShowConteiner'
 import ShowImgConteiner from './Component/Show/ShowImg/ShowImgConteiner'
 import Choice from './Component/Choice/Choice'
-import True from './Component/Answers/True';
 
 const App = (props) => {
   return (
@@ -18,12 +17,11 @@ const App = (props) => {
       <Navbar/>
       <div className="app-wrapper-content">
         <Routes>
-        <Route path='/choice/' element={<Choice/>} />
+        <Route path='/What-where-when' element={<Choice/>} />
           <Route path='/form/' element={<FormTextConteiner/>} />
           <Route path='/formImg/' element={<FormImgConteiner/>} />
           <Route path='/show/' element={<ShowConteiner/>} />
           <Route path='/showImg/' element={<ShowImgConteiner/>} />
-          <Route path='/true' element={<True/>} />
         </Routes>
       </div>
       </BrowserRouter>

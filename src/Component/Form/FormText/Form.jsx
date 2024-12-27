@@ -1,15 +1,27 @@
 import React from "react";
 import QuestionText from './Redux-form'
-import { Navigate,useNavigate } from "react-router-dom";
 
 class FormText extends React.Component {
 
   newInformation = (props) => {
-    this.props.addquestionText(props.question,props.answer0,props.answer1,props.answer2,props.answer3,props.Timer);
-  };
+    let object = {
+      question: props.question,
+      correctAnswer: props.answer0,
+      answer0: props.answer1,
+      answer1: props.answer2,
+      answer2: props.answer3,
+      Timer: props.Timer,
+    } 
+    this.props.formData.push(object);
+    // window.location.reload()
+    };
+
+  
+
+  number = this.props.formData.length
 
   render() {
-    return <QuestionText newInformation={this.newInformation} />
+    return <QuestionText number={this.number} newInformation={this.newInformation} />
   }
 }
 

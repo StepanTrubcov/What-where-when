@@ -4,16 +4,16 @@
   "homepage": "https://StepanTrubcov.github.io/What-where-when",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@headlessui/react": "^2.2.0",
+    "@testing-library/jest-dom": "5.17.0",
+    "jest": "27.5.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-redux": "^8.0.0",
+    "react-redux": "8.0.0",
     "react-router-dom": "6.26.1",
     "react-scripts": "5.0.1",
-    "redux": "^4.0.0",
-    "redux-form": "^8.3.10",
+    "redux": "4.0.0",
+    "redux-form": "8.3.10",
     "sweetalert": "2.1.2",
     "sweetalert2": "11.12.4",
     "web-vitals": "2.1.4"
@@ -23,8 +23,11 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +48,12 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0"
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "gh-pages": "^6.2.0",
+    "jsdom": "^25.0.1",
+    "vitest": "^2.1.5",
+    "vitest-mock-extended": "^2.0.2"
   }
 }

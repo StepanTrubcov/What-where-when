@@ -1,5 +1,4 @@
 .blok{
-  display: grid;
     border-width:3px;
     border-style:groove;
     border-color: rgb(27, 1, 255);
@@ -8,23 +7,25 @@
     margin: 20px auto 0 auto;
     border-radius: 30px;
     width: 530px;
-    height: 520px;
+    height: 490px;
     -webkit-box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
     -moz-box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
     box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
     box-shadow: 0 0 1px #51b7ff, 0 0 2px #51b7ff, 0 0 6px #51b7ff, 0 0 12px #51b7ff, inset 0 0 1px #51b7ff, inset 0 0 2px #51b7ff, inset 0 0 6px #51b7ff, inset 0 0 12px #51b7ff;
 }
 
+.text{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
 .flex{
   display: flex;
 }
-/* 
-.firstLine{
-  display: flex;
-} */
 
 .div{
-  margin: 40px 0 0 0;
+  margin-top: 45px;
   display: flex;
 }
 
@@ -39,8 +40,8 @@
 }
 
 .Answers0{
-  font-size: 10px;
-  margin: 0;
+  font-weight: 600;
+  font-size: 13px;
   text-align: center
 }
 
@@ -66,6 +67,7 @@
 .NavLink:hover:after { transform: scaleX(1); }
 
 .Question{
+  font-weight: 600;
     font-size: 25px;
     margin: 10px;
     text-align: center;
@@ -87,6 +89,7 @@
   }
 
   .Answers{
+    font-weight: 600;
     font-size: 20px;
     text-align: center
   }
@@ -106,27 +109,24 @@
   }
 
   .Timer{
-    margin: 20px 0 0 30px;
+    margin: 5px 15px 0 40px;
   }
 
   .linieTimer{
-    width: 80%;
-    height: 20px;
-    font-size: 25px;
-    margin: 28px 100px 0 0px;
-    border-radius: 30px;
-    border-color: #51b7ff;
-    border-width: 5px;
+    width: 25px;
+    margin: 0 50px 0 0;
   }
 
   .correct{
-    margin: 5px 0 0 65px ;
+    margin: 5px 0 0 45px ;
+    font-weight: 600;
     font-size: 18px;
   }
 
   .button {
-    width: 70px;
+    width: 90px;
     height: 50px;
+    font-size: 15px;
     outline: none;
     color: rgb(255, 255, 255);
     background: rgb(0, 0, 0);
@@ -136,7 +136,6 @@
     border-radius: 10px;
     border-width: 2px;
     border-color: #FFF;
-    margin: 0px 245px 0 0px;
 }
 
 .button:before {
@@ -195,8 +194,8 @@
     font-size: 20px;
   }
   .blok{
-    width: 427px;
-    height: 440px;
+    width: 400px;
+    height: 450px;
   }
   .linieQuestion{
     width: 70%;
@@ -207,24 +206,21 @@
     border-width: 5px;
   }
   .correct{
-    margin: 5px 0 0 35px ;
+    margin: 5px 0 0 42px ;
     font-size: 15px;
   }
   .linieTimer{
-    width: 80%;
-    height: 15px;
-    font-size: 25px;
-    margin: 8px 0px 0 0px;
-    border-radius: 30px;
-    border-color: #51b7ff;
-    border-width: 5px;
+    width: 18px;
+    margin: 0 35px 0 0;
   }
   .Timer{
     font-size: 20px;
-    margin: 0px 10px 10px 20px;
+    margin: 5px 15px 0 22px;
   }
   .button {
-    margin: 0px 200px 0 60px;
+    width: 70px;
+    height: 40px;
+    font-size: 10px;
 }
 .NavLink{
   font-size: 20px;

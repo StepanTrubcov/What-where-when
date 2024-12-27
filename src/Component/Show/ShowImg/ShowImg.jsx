@@ -20,17 +20,17 @@ class ShowImg extends React.Component {
     if (answer === this.props.formDataImg.correctAnswerImg) {
       this.timer = false 
      return swal({
-        title: "Right!!!",
-        text: "You did a great job with the task.",
+        title: "Правильно!!!",
+        text: "Ты молодец",
         icon: "success",
-        button: "Сontinue",
+        button: "Продолжить",
       }) , <Navigate replace to="/choice" />;
     } else {
       return swal({
-        title: "Not true!!!",
-        text: "Try again.",
+        title: "Не правильно(",
+        text: "Попробуй ещё раз!",
         icon: "error",
-        button: "try",
+        button: "Назад",
       });
     }
   };
@@ -43,30 +43,23 @@ class ShowImg extends React.Component {
       className={c.img} src={item} />
   ));
   render() {
-  const TimerImg = () =>{
-    if(this.timer === true){
-      return <Timer/>
-     }
-  }
-
     return (
       <body onload="yourfunction()">
-        <div className={c.Timer} >{TimerImg()}</div>
         <div className={c.flex} >
         <div className={c.blok}>
           <div  className={c.Question} >
-            <p className={c.Question}>Question?</p>
+            <p className={c.Question}>Вопрос</p>
           </div>
           <div>
             <p className={c.Question}>{this.props.formDataImg.questionImg || 'No question'}</p>
           </div>
           <div>
-            <p className={c.Answers}>Answers</p>
+            <p className={c.Answers}>Врянты ответов</p>
           </div>
           <div>{this.mixer}</div>
           <div>
             <NavLink to="/formImg/" className={c.NavLink}>
-              Back
+              Назад
             </NavLink>
           </div>
         </div>

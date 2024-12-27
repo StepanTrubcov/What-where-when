@@ -14,8 +14,8 @@ const ReduxForm = ({set,handleSubmit, correctPhoto, correctPreview}) => {
   const [wrongAnswer3, setWrongAnswer3] = useState()
   return (
     <form onSubmit={handleSubmit} className={c.blok}>
-      <div>
-        <p className={c.Question} >Question for preschoolers</p>
+      <div className={c.Question} >
+        <p>Вопросы для дошкольников</p>
       </div>
       <div>
         <Field
@@ -25,13 +25,13 @@ const ReduxForm = ({set,handleSubmit, correctPhoto, correctPreview}) => {
           name={'questionImg'}
         />
       </div>
-      <div>
-        <p className={c.Answers} >Answer with pictures</p>
+      <div className={c.Answers}>
+        <p>Ответы</p>
       </div>
-      <div>
-        <p className={c.Answers0} >Enter the image address in response</p>
+      <div className={c.Answers0}>
+        <p >В ответах будут картинки</p>
       </div>
-      <p className={c.correct} >correct answer</p>
+      <p className={c.correct} >Правильный ответ</p>
       <div className={c.firstLine} >
         <input className={c.input} type='file' onChange={correctPhoto} />
         <input className={c.input} type='file' onChange={(e) => {
@@ -55,7 +55,7 @@ const ReduxForm = ({set,handleSubmit, correctPhoto, correctPreview}) => {
         <img src={wrongAnswer3} className={c.img} ></img>
       </div>
       <div>
-        <button onClick={()=>{set(wrongAnswer1,wrongAnswer2,wrongAnswer3)}} className={c.button}>Save</button>
+        <button onClick={()=>{set(wrongAnswer1,wrongAnswer2,wrongAnswer3)}} className={c.button}>Сохранить</button>
       </div>
     </form>
   );
