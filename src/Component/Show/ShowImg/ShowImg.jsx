@@ -1,72 +1,26 @@
 import React from "react";
-import { NavLink,Navigate } from "react-router-dom";
 import c from "./ShowImg.module.css";
-import shuffle from "../../Function/shuffle";
-import swal from "sweetalert";
-import Timer from '../../Timer/Timer'
+import QuestionnaireImg from "./QuestionnaireImg/QuestionnaireImg";
 
 class ShowImg extends React.Component {
-  things = [
-    this.props.formDataImg.correctAnswerImg,
-    this.props.formDataImg.answer0Img,
-    this.props.formDataImg.answer1Img,
-    this.props.formDataImg.answer2Img,
-  ];
 
-  timer=this.props.formDataImg.TimerImg
+render(){
+  console.log(this.props.formDataImg)
 
-  onAnswer = (event) => {
-    const answer = event.target.dataset.value;
-    if (answer === this.props.formDataImg.correctAnswerImg) {
-      this.timer = false 
-     return swal({
-        title: "Правильно!!!",
-        text: "Ты молодец",
-        icon: "success",
-        button: "Продолжить",
-      }) , <Navigate replace to="/choice" />;
-    } else {
-      return swal({
-        title: "Не правильно(",
-        text: "Попробуй ещё раз!",
-        icon: "error",
-        button: "Назад",
-      });
-    }
-  };
+ const questionnaireImg = this.props.formDataImg.map(q => (
+    <QuestionnaireImg questionImg={q.questionImg} correctAnswerImg={q.correctAnswerImg} answer0Img={q.answer0Img} answer1Img={q.answer1Img} answer2Img={q.answer2Img} />
+  ))
 
-  mixer = shuffle(this.things).map((item) => (
-      <img 
-            data-value={item}
-            onClick={this.onAnswer}
-            key={item}
-      className={c.img} src={item} />
-  ));
-  render() {
-    return (
-      <body onload="yourfunction()">
-        <div className={c.flex} >
-        <div className={c.blok}>
-          <div  className={c.Question} >
-            <p className={c.Question}>Вопрос</p>
-          </div>
-          <div>
-            <p className={c.Question}>{this.props.formDataImg.questionImg || 'No question'}</p>
-          </div>
-          <div>
-            <p className={c.Answers}>Врянты ответов</p>
-          </div>
-          <div>{this.mixer}</div>
-          <div>
-            <NavLink to="/formImg/" className={c.NavLink}>
-              Назад
-            </NavLink>
-          </div>
-        </div>
-        </div>
+if(this.props.formDataImg.length < 1){
+  return<div className={c.noText} >
+    Вы не ввели вопросы и ответы или не сохранили форму
+  </div>
+}
+
+    return  <body>
+        {questionnaireImg}
       </body>
-    );
-  }
+}
 }
 
 export default ShowImg;

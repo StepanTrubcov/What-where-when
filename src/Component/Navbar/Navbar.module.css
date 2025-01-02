@@ -1,23 +1,23 @@
 .NavLink{
-    font-size: 30px;
-    margin: 20px 0 0 20px;
-    display: inline-block;
+    width: 150px;
+    background-color: #7395AE;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 7px;
+   display: flex;
+   justify-content: center;
+   margin: 10px auto 70px auto;
     text-decoration: none;
-    color: black;
-    font-family: sans-serif;
+    color:rgb(0, 0, 0);
+    border-width:3px;
+    border-style:solid;
+    border-color: #556e7f;
 }
 
-.NavLink::after{
-    display:block;
-    content: '';
-    width: inherit;
-    border-bottom: solid 3px black;  
-    transform: scaleX(0);  
-    transition: transform 250ms ease-in-out;
-    transform-origin: left;
+.NavLink:hover{
+    background-color: #536b7d;
 }
-
-.NavLink:hover:after { transform: scaleX(1); }
 
 @media (max-width:586px){
     .NavLink{

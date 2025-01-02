@@ -1,0 +1,9 @@
+.text{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 200px;
+    width: 700px;
+    color:rgb(0, 0, 0);
+}

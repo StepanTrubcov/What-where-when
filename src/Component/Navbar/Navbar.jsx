@@ -5,8 +5,8 @@ import c from './Navbar.module.css'
 const Navbar = (props) =>{
 return(
     <div>
-        <NavLink to={'/What-where-when'}  >
-         <p className={c.NavLink} >Главная</p>
+        <NavLink className={c.NavLink} to={'/What-where-when'}  >
+         Главная
             </NavLink>
     </div>
 )

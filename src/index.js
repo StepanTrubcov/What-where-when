@@ -4,13 +4,13 @@ import store from './redux/react-redux'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 
 
 let rerenderEntireTree = (state) => {
   root.render(
     <Provider store={store}>
-        <App/>
+        <App />
     </Provider>
   );
 };

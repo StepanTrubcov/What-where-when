@@ -1,17 +1,23 @@
 .blok{
-    border-width:3px;
+    border-width:1px;
     border-style:groove;
-    border-color: rgb(27, 1, 255);
-    color:rgb(255, 255, 255);
-    background-color:rgb(2, 1, 52);
-    margin:20px auto 0 auto;
-    border-radius: 20px;
-    width: 550px;
-    height: 550px;
+    border-color: #867b73;
+    color:rgb(0, 0, 0);
+    background-color:#B1A296;
+    margin:10px auto 30px auto;
+    border-radius: 15px;
+    width: 650px;
+    height: 700px;
     -webkit-box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
     -moz-box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
     box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
-    box-shadow: 0 0 1px #51b7ff, 0 0 2px #51b7ff, 0 0 6px #51b7ff, 0 0 12px #51b7ff, inset 0 0 1px #51b7ff, inset 0 0 2px #51b7ff, inset 0 0 6px #51b7ff, inset 0 0 12px #51b7ff;
+    box-shadow: 0 0 1px #675e58, 0 0 2px #675e58, 0 0 6px #675e58, 0 0 12px #675e58, inset 0 0 1px #675e58, inset 0 0 2px #675e58, inset 0 0 6px #675e58, inset 0 0 12px #675e58;
+}
+
+.number{  
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .firstLine{
@@ -30,29 +36,30 @@ input[type=file]::file-selector-button {
 }
 
 .img{
-  width: 100px;
-  height: 40px;
-  margin: 10px 35px 10px 100px;
+  width: 130px;
+  height: 70px;
+  margin: 10px 25px 10px 120px;
   border-radius: 5px;
 }
 
 .input {
-  margin: 10px 0px 10px 80px;
+  margin: 10px 0px 10px 95px;
   display: block;
   position: relative;
-  width: 150px;
-  height: 34px;
-  font-size: 15px;
-  border-radius: 25px;
-  background: linear-gradient(40deg, #6e6eff, hsl(234, 100%, 51%));
-  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
-  display: flex;
+  width: 170px;
+  padding: 2px;
+  font-size: 17px;
+  border-radius: 10px;
+  border-color: #556e7f;
+  background-color: #7395AE;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform .2s ease-out;
+  border-width:3px;
+    border-style:solid;
+}
+
+.input:hover{
+  background-color: #536b7d;
 }
 
 .div{
@@ -61,16 +68,18 @@ input[type=file]::file-selector-button {
 }
 
 .Answers0{
-  font-size: 10px;
+  font-size: 15px;
+  font-weight: 700;
   text-align: center
 }
 
 .NavLink{
     font-size: 25px;
-    margin: 15px 20px 0 100px;
+    font-weight: 700;
+    margin: 15px 50px 0 140px;
     display: inline-block;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: sans-serif;
 }
 
@@ -78,7 +87,7 @@ input[type=file]::file-selector-button {
     display:block;
     content: '';
     width: inherit;
-    border-bottom: solid 3px rgb(255, 255, 255);  
+    border-bottom: solid 3px rgb(0, 0, 0);  
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
     transform-origin: left;
@@ -87,8 +96,8 @@ input[type=file]::file-selector-button {
 .NavLink:hover:after { transform: scaleX(1); }
 
 .Question{
-  font-weight: 600;
-    font-size: 25px;
+  font-weight: 700;
+    font-size: 30px;
     text-align: center;
 }
 @keyframes neon-2 {
@@ -112,131 +121,57 @@ input[type=file]::file-selector-button {
   }
 
   .linieQuestion{
-    width: 70%;
-    height: 30px;
+    width: 80%;
+    padding: 7px;
     font-size: 25px;
-    margin: 15px 0 0 77px;
+    margin: 15px 0 0 53px;
     border-radius: 30px;
-    border-color: #51b7ff;
+    border-color: #675e58;
     border-width: 5px;
   }
 
   .Answers{
-    font-weight: 600;
+    font-weight: 700;
     font-size: 20px;
     text-align: center
-  }
-
-  .linie{
-    width: 80%;
-    height: 30px;
-    font-size: 25px;
-    margin: 10px 0 0 15px;
-    border-radius: 30px;
-    border-color: #51b7ff;
-    border-width: 5px;
   }
 
   .Timer{
     margin: 20px 0 0 30px;
   }
 
-  .linieTimer{
-    width: 80%;
-    height: 20px;
-    font-size: 25px;
-    margin: 28px 0 0 0px;
-    border-radius: 30px;
-    border-color: #51b7ff;
-    border-width: 5px;
-  }
-
-  .input0{
-    width: 40%;
-    height: 30px;
-    font-size: 25px;
-    margin: 10px 0 0 135px;
-    border-radius: 30px;
-    border-color: #51b7ff;
-    border-width: 5px;
-  }
-
-  .input{
-    display: flex;
-  }
-
   .correct{
-    margin: 5px 0 0 85px ;
-    font-weight: 600;
+    margin: 5px 0 0 95px ;
+    font-weight: 700;
     font-size: 16px;
   }
 
+  .buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+  }
+
   .button {
-    width: 80px;
-    height: 50px;
-    outline: none;
-    color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-    border-width: 2px;
-    border-color: #FFF;
-    margin: 10px 30px 0 230px;
+    width: 120px;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #7395AE;
+    border-radius: 7px;
+    border-width:3px;
+    border-style:solid;
+    border-color: #556e7f;
+}
+
+
+.button:hover{
+  background-color: #536b7d;
 }
 
 .images{
   display: flex;
-}
-
-.button:before {
-    content: '';
-    background: linear-gradient(45deg, #25c1ff, #004a8a, #3ccedb, #1bbdbb, #00ffd5, #002bff, #2600ff, #1104a0, #160066);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.button:active {
-    color: #000
-}
-
-.button:active:after {
-    background: transparent;
-}
-
-.button:hover:before {
-    opacity: 1;
-}
-
-.button:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
-
+} 
 @media (max-width:586px){
   .blok{
     width: 400px;
@@ -248,7 +183,7 @@ input[type=file]::file-selector-button {
     font-size: 25px;
     margin: 15px 0 0 50px;
     border-radius: 30px;
-    border-color: #51b7ff;
+    border-color: #675e58;
     border-width: 5px;
   }
   .correct{

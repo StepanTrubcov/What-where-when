@@ -1,38 +1,35 @@
 .header {
-    background-image: url('https://avatars.dzeninfra.ru/get-zen_doc/1894366/pub_5e6e2b0b6be9d72182b9ede9_5e6e2b146961bd79dbeba792/scale_1200');
-    height: 100px;
-  }
-.sign{
   display: flex;
-  margin: 30px 0 0 30px;
-}
+  justify-content: center;
+  }
 
 @keyframes play {
   100% { background-position: -1900px; }
 }
 
-  .sign .sign_word {
-    font-size: 40px;
-    font-weight: bold;
+  .sign  {
+    margin-top:70px ;
+    height: 150px;
+    font-size: 70px; 
+   font-weight: 800;
     line-height: 50px;
-    color: #FFF;
+    color: #000000;
     font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
     animation: 2s neon-2 alternate-reverse infinite;
 }
 @keyframes neon-2 {
     from {
-        text-shadow: 0 0 5px #FFF,
+        text-shadow: 0 0 7px #ffffff,
         0 0 10px #FFF,
         0 0 15px #FFF,
-        0 0 20px #BFE2FF;
+        0 0 20px #d4d4d4;
     }
     to {
-        text-shadow: 0 0 20px #BFE2FF,
-        0 0 35px #BFE2FF,
-        0 0 40px #BFE2FF,
-        0 0 50px #BFE2FF,
-        0 0 800px #BFE2FF;
+        text-shadow: 0 0 30px #ffffff,
+        0 0 35px #ffffff,
+        0 0 40px #ffffff,
+        0 0 50px #ffffff,
+        0 0 800px #ffffff;
     }
 }    
 

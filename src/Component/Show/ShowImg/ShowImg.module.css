@@ -1,16 +1,25 @@
 .blok{
     border-width:3px;
     border-style:groove;
-    border-color: rgb(27, 1, 255);
-    color:rgb(255, 255, 255);
-    background-color:rgb(2, 1, 52);
+    border-color: #867b73;
+    color:rgb(0, 0, 0);
+    background-color:#B1A296;
     border-radius: 30px;
-    width: 550px;
-    height: 540px;
+    width: 680px;
+    height: 640px;
+    margin: 20px 0 100px 0;
     -webkit-box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
     -moz-box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
     box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
-    box-shadow: 0 0 1px #51b7ff, 0 0 2px #51b7ff, 0 0 6px #51b7ff, 0 0 12px #51b7ff, inset 0 0 1px #51b7ff, inset 0 0 2px #51b7ff, inset 0 0 8px #51b7ff, inset 0 0 15px #51b7ff;
+    box-shadow: 0 0 1px #675e58, 0 0 2px #675e58, 0 0 6px #675e58, 0 0 12px #675e58, inset 0 0 1px #675e58, inset 0 0 2px #675e58, inset 0 0 8px #675e58, inset 0 0 15px #675e58;
+}
+
+
+.noText{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color:aliceblue;
 }
 
 .flex{
@@ -19,88 +28,37 @@
 }
 
 .img{
-    width: 180px;
-    height: 120px;
-    border-radius: 30px;
+    width: 240px;
+    height: 180px;
+    border-radius: 5px;
     margin: 15px 10px 0 60px;
 }
-
-.NavLink{
-    font-size: 25px;
-    margin: 20px 0 0 30px;
-    display: inline-block;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-family: sans-serif;
-}
-
-.NavLink::after{
-    display:block;
-    content: '';
-    width: inherit;
-    border-bottom: solid 3px rgb(255, 255, 255);  
-    transform: scaleX(0);  
-    transition: transform 250ms ease-in-out;
-    transform-origin: right;
-}
-
-.NavLink:hover:after { transform: scaleX(1); }
-
-.NavLink0{
-    font-size: 25px;
-    margin: 80px 0 0 30px;
-    display: inline-block;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-family: sans-serif;
-}
-
-.NavLink0::after{
-    display:block;
-    content: '';
-    width: inherit;
-    border-bottom: solid 3px rgb(255, 255, 255);  
-    transform: scaleX(0);  
-    transition: transform 250ms ease-in-out;
-    transform-origin: right;
-}
-
-.NavLink0:hover:after { transform: scaleX(1); }
 
 .text{
     font-size: 24px;
     margin: 100px 0 0 50px;
 }
 
-.Question{
-    font-size: 25px;
+.QuestionText{
+    font-size: 35px;
     text-align: center;
+    font-weight: 700;
+    margin: 20px;
+}
+
+.Question{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
     margin: 20px;
 }
 
 .Answers{
-    font-size: 28px;
+    font-size: 30px;
     text-align: center;
+    font-weight: 700;
     margin: 20px;
 }
-
-.button{
-    width: 150px;
-    height: 100px;
-    color:#000000;
-      border-radius: 30px;
-    margin: 15px 10px 0 85px;
-}
-
-.button:hover {
-    background-color: #014a82; /* Зеленый */
-    color: rgb(255, 255, 255);
-  }
-
-  .text0{
-    color:#000000;
-    font-size: 20px;
-  }
 
   
   @media (max-width:586px){

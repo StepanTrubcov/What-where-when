@@ -17,7 +17,12 @@ class Questionnaire extends React.Component{
  onAnswer = (event) => {
      const answer = event.target.dataset.value;
      if (answer === this.props.correctAnswer) {
-       return
+       return swal({
+        title: "Правильно!!!",
+        text: "Ты молодец!",
+        icon: "success",
+        button: "Назад",
+      });
      } else {
        return swal({
          title: "Не правильно(",
@@ -44,10 +49,10 @@ class Questionnaire extends React.Component{
   return<div>
    <div className={c.blok}>
       <div>
-        <p className={c.Question}>Вопрос?</p>
+        <p className={c.Question}>Вопрос</p>
       </div>
       <div>
-        <p className={c.Question}>{this.props.question}</p>
+        <p className={c.QuestionText}>{this.props.question}</p>
       </div>
       <div>
         <p className={c.Answers}>Варианты ответов</p>

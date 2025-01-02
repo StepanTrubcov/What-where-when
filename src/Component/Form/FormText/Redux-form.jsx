@@ -1,13 +1,25 @@
 import React, { useState } from "react";
 import c from "./Form.module.css";
-import { NavLink, useNavigate } from "react-router-dom";
-import { Field, reduxForm } from "redux-form";
-import { maxLengthCreator, requiredField } from '../../../validator/validator'
-import { Input, InputAns } from '../../common/FormsControls'
-
-let maxLength30 = maxLengthCreator(50)
+import { NavLink } from "react-router-dom";
+import { reduxForm } from "redux-form";
 
 const ReduxForm = (props) => {
+
+    const [wrongAnswer1, setWrongAnswer1] = useState('')
+    const [wrongAnswer2, setWrongAnswer2] = useState('')
+    const [wrongAnswer3, setWrongAnswer3] = useState('')
+    const [correctPreview, setCorrectPreview] = useState('')
+    const [text, setText] = useState('')
+
+    const setImg = () =>{
+      props.set(text,correctPreview,wrongAnswer1,wrongAnswer2,wrongAnswer3)
+      setWrongAnswer1('')
+      setWrongAnswer2('')
+      setWrongAnswer3('')
+      setCorrectPreview('')
+      setText('')
+    }
+
   return (
     <div className={c.flex} >
       <form onSubmit={props.handleSubmit} className={c.blok}>
@@ -15,11 +27,12 @@ const ReduxForm = (props) => {
           <p>Вопросы для школьников</p>
         </div>
         <div>
-          <Field
-            validate={[requiredField, maxLength30]}
-            component={Input}
+          <input
             className={c.linieQuestion}
-            name={'question'}
+            onChange={(e) => {
+              setText(e.target.value)
+            }}
+            value={text}
           />
         </div>
         <div className={c.Answers} >
@@ -31,43 +44,40 @@ const ReduxForm = (props) => {
         <p className={c.correct} >Правильный ответ</p>
         <div className={c.firstLine} >
           <div className={c.input} >
-            <Field
-              validate={[requiredField, maxLength30]}
-              component={InputAns}
+            <input
               className={c.linie}
-              name={'answer0'}
+              onChange={(e) => {
+                setCorrectPreview(e.target.value)
+              }}
+              value={correctPreview}
             />
-            <Field
-              className={c.linie}
-              validate={[requiredField, maxLength30]}
-              component={InputAns}
-              name={'answer1'}
+            <input
+            className={c.linie}
+              onChange={(e) => {
+                setWrongAnswer1(e.target.value)
+              }}
+              value={wrongAnswer1}
             />
           </div>
           <div className={c.input} >
-            <Field
-              validate={[requiredField, maxLength30]}
-              component={InputAns}
+            <input
               className={c.linie}
-              name={'answer2'}
+              onChange={(e) => {
+                setWrongAnswer2(e.target.value)
+              }}
+              value={wrongAnswer2}
             />
-            <Field
-              validate={[requiredField, maxLength30]}
-              component={InputAns}
+            <input
               className={c.linie}
-              name={'answer3'}
+              onChange={(e) => {
+                setWrongAnswer3(e.target.value)
+              }}
+              value={wrongAnswer3}
             />
           </div>
         </div>
         <div className={c.div} >
-          <h2 className={c.Timer} >Таймер</h2>
-          <Field
-            component={'input'}
-            type='checkbox'
-            className={c.linieTimer}
-            name={'Timer'}
-          />
-          <button onClick={props.setNumberFun} className={c.button}>Сохранить</button>
+          <button onClick={()=>{setImg()}} className={c.button}>Сохранить</button>
           <NavLink className={c.NavLink} to='/show/' > Далее </NavLink>
         </div>
       </form>
@@ -75,26 +85,30 @@ const ReduxForm = (props) => {
   );
 }
 
+
 const LoginReduxForm = reduxForm({
   form: "question",
 })(ReduxForm);
 
 const QuestionText = (props) => {
+
   const [number, setNumber] = useState(0)
 
-  const onSubmit = (formData) => {
-    props.newInformation(formData)
-    setNumber(number + 1)
+  const wrong = []
+
+  const set = (text,correctPreview,wrongAnswer1,wrongAnswer2,wrongAnswer3) => {
+    return wrong.push(text,correctPreview,wrongAnswer1,wrongAnswer2,wrongAnswer3)
   }
 
-  const setNumberFun = () => {
-
+  const onSubmit = () => {
+    props.newInformation(wrong[0],wrong[1],wrong[2],wrong[3],wrong[4])
+    setNumber(number + 1)
   }
 
   return (
     <div className={c.information}>
       <p className={c.text} >Всего вопросов: {number}</p>
-      <LoginReduxForm setNumberFun={setNumberFun} onSubmit={onSubmit} />
+      <LoginReduxForm set={set} onSubmit={onSubmit} />
     </div>
   )
 };

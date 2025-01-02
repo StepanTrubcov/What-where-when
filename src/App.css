@@ -1,4 +1,27 @@
 .app-wrapper{
-  display: grid;
-  grid-template-columns: auto;
+  position: relative;
+}
+.app-wrapper::before {
+    background: url("https://kartinki.pics/uploads/posts/2021-07/1626978533_5-kartinkin-com-p-fon-iz-voprositelnikh-znakov-krasivo-6.png") no-repeat center center;
+    background-size: cover;
+    content: ' ';
+    height: 965px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: -1;
+}
+
+.app-wrapper-content{
+  border-width:3px;
+  border-style:solid;
+  flex-wrap: wrap;
+  margin: 0 auto 20px auto;
+  background-color:#5D5C61;
+  border-color: #434243;
+  max-width:1000px;
+  border-radius:15px;
+  min-height: 700px;
 }

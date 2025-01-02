@@ -1,7 +1,5 @@
 import React from "react";
 import c from "./Show.module.css";
-import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
-import { useState } from 'react'
 import Questionnaire from './Questionnaire/Questionnaire'
 import { NavLink } from "react-router-dom";
 
@@ -12,8 +10,8 @@ const Show = (props) => {
   ))
 
   if(props.formData.length < 1){
-    return<div>
-      Вы не ввели вопросы и ответы
+    return<div className={c.noText} >
+      Вы не ввели вопросы и ответы или не сохранили форму
     </div>
   }
 

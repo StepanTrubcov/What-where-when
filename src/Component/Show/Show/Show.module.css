@@ -1,17 +1,24 @@
 .blok{
     border-width:3px;
     border-style:groove;
-    border-color: rgb(27, 1, 255);
-    color:rgb(255, 255, 255);
-    background-color:rgb(2, 1, 52);
+    border-color: #867b73;
+    color:rgb(0, 0, 0);
+    background-color:#B1A296;
     margin: 150px auto 150px auto;
     border-radius: 30px;
-    width: 580px;
-    height: 550px;
+    width: 680px;
+    height: 650px;
     -webkit-box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
     -moz-box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
     box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
-    box-shadow: 0 0 1px #51b7ff, 0 0 2px #51b7ff, 0 0 6px #51b7ff, 0 0 12px #51b7ff, inset 0 0 1px #51b7ff, inset 0 0 2px #51b7ff, inset 0 0 8px #51b7ff, inset 0 0 15px #51b7ff;
+    box-shadow: 0 0 1px #675e58, 0 0 2px #675e58, 0 0 6px #675e58, 0 0 12px #675e58, inset 0 0 1px #675e58, inset 0 0 2px #675e58, inset 0 0 8px #675e58, inset 0 0 15px #675e58;
+}
+
+.noText{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color:aliceblue;
 }
 
 .flex{
@@ -68,30 +75,40 @@
 .Question{
     font-size: 35px;
     text-align: center;
+    font-weight: 600;
     margin: 20px;
 }
 
+.QuestionText{
+    font-size: 35px;
+    text-align: center;
+    font-weight: 700;
+    margin: 25px;
+}
+
 .Answers{
+    font-weight: 600;
     font-size: 38px;
     text-align: center;
     margin: 20px;
 }
 
 .button{
-    width: 200px;
-    height: 100px;
+    font-weight: 600;
+    width:250px;
+    height: 150px;
     color:#000000;
-    -webkit-box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
-    -moz-box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
-    box-shadow: 0px 5px 28px 21px rgba(0, 0, 0, 0.42);
-    box-shadow: 0 0 1px #51b7ff, 0 0 2px #51b7ff, 0 0 6px #51b7ff, 0 0 12px #51b7ff, inset 0 0 1px #51b7ff, inset 0 0 2px #51b7ff, inset 0 0 8px #51b7ff, inset 0 0 15px #51b7ff;
-    border-radius: 30px;
+    background-color: #7395AE;
+    border-color: #556e7f;
+    border-radius: 20px;
+    border-width:3px;
+    border-style:solid;
     font-size: 25px;
-    margin: 15px 10px 10px 60px;
+    margin: 15px 0px 10px 60px;
 }
 
 .button:hover {
-    background-color: #014a82; /* Зеленый */
+    background-color: #556e7f; 
     color: rgb(255, 255, 255);
   }
 
@@ -103,11 +120,12 @@
   @media (max-width:586px){
     .blok{
         width: 390px;
-        height: 450px;
+        height: 470px;
         }
         .button{
-            width: 100px;
-            height: 60px;
+            width: 120px;
+            height: 80px;
+            margin: 15px 0px 10px 50px;
         }
         .NavLink0{
             margin: 150px 0 0 30px;
@@ -115,9 +133,5 @@
         .text{
             font-size: 19px;
             margin: 100px 0 0 18px;
-        }
-        .Timer{
-            margin: 0px 0 10px 10px;
-            font-size: 20px;
         }
   }
